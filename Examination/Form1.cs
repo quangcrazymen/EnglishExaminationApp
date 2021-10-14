@@ -11,11 +11,20 @@ using System.IO;
 
 namespace Examination
 {
-    public partial class Form1 : Form
+    public partial class Exam : Form
     {
-        public Form1()
+        DataTable dt = new DataTable();
+
+        public Exam()
         {
             InitializeComponent();
+            dt.Columns.Add("Question");
+            dt.Columns.Add("A");
+            dt.Columns.Add("B");
+            dt.Columns.Add("C");
+            dt.Columns.Add("D");
+            dt.Columns.Add("UrAnswer");
+            dt.Columns.Add("Solution");
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -23,12 +32,6 @@ namespace Examination
             this.Close();
         }
 
-        private void MakeTable()
-        {
-            DataTable table = new DataTable("Exam");
-            DataColumn column;
-
-        }
 
         void ReadFile(string file)
         {
