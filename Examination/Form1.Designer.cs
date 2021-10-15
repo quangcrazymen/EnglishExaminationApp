@@ -35,7 +35,7 @@ namespace Examination
             this.Close = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.AnswerDisplay = new System.Windows.Forms.RichTextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.QuestionDisplay = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -107,7 +107,7 @@ namespace Examination
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.richTextBox1);
+            this.panel2.Controls.Add(this.AnswerDisplay);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(225, 0);
@@ -115,13 +115,13 @@ namespace Examination
             this.panel2.Size = new System.Drawing.Size(631, 568);
             this.panel2.TabIndex = 2;
             // 
-            // richTextBox1
+            // AnswerDisplay
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(111, 359);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(508, 187);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
+            this.AnswerDisplay.Location = new System.Drawing.Point(111, 359);
+            this.AnswerDisplay.Name = "AnswerDisplay";
+            this.AnswerDisplay.Size = new System.Drawing.Size(508, 187);
+            this.AnswerDisplay.TabIndex = 2;
+            this.AnswerDisplay.Text = "";
             // 
             // panel4
             // 
@@ -166,7 +166,7 @@ namespace Examination
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.RichTextBox QuestionDisplay;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox AnswerDisplay;
     }
 }
 

@@ -32,23 +32,46 @@ namespace Examination
             this.Close();
         }
 
-
-        void ReadFile(string file)
+        //Read file funtion
+        string ReadFile(string file)
         {
             StreamReader sr = new StreamReader(file);
             string str;
+            string result="";
             str = sr.ReadLine();
             while(str != null)
             {
-                QuestionDisplay.Text += str +'\n';
+                result+= str +'\n';
                 str = sr.ReadLine();
             }
             sr.Close();
+            return result;
         }
+
+        string ReadFileAnswer(string file)
+        {
+            StreamReader sr = new StreamReader(file);
+            string str;
+            string result = "";
+            str = sr.ReadLine();
+            int i = 1;
+            while (str != null)
+            {
+                result += "Question "+i+" : "+str + '\n';
+                str = sr.ReadLine();
+                i++;
+            }
+            sr.Close();
+            return result;
+        }
+
         private void Test_Click(object sender, EventArgs e)
         {
-            
-            ReadFile(@"D:\code\CSharp\Buoi5\ReadWriteFile\Buổi 5\TracNghiem_01.txt");
+            string str;
+            str=ReadFile(@"D:\code\CSharp\Buoi5\ReadWriteFile\Buổi 5\TracNghiem_01.txt");
+            QuestionDisplay.Text = str;
+            str = ReadFileAnswer(@"D:\code\CSharp\Buoi5\ReadWriteFile\Buổi 5\DapAn_01.txt");
+            AnswerDisplay.Text = str;
         }
     }
 }
