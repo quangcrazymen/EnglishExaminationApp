@@ -67,11 +67,51 @@ namespace Examination
 
         private void Test_Click(object sender, EventArgs e)
         {
+            Exam exam = new Exam();
             string str;
             str=ReadFile(@"D:\code\CSharp\Buoi5\ReadWriteFile\Buổi 5\TracNghiem_01.txt");
-            QuestionDisplay.Text = str;
-            str = ReadFileAnswer(@"D:\code\CSharp\Buoi5\ReadWriteFile\Buổi 5\DapAn_01.txt");
-            AnswerDisplay.Text = str;
+            //QuestionDisplay.Text = str;
+            int index = str.IndexOf("A");
+            //str = ReadFileAnswer(@"D:\code\CSharp\Buoi5\ReadWriteFile\Buổi 5\DapAn_01.txt");
+            //AnswerDisplay.Text = str;
+
+            //USE SPLIT TO SPLIT STRING
+            char[] delimiterChars = { '\n', '\t', 'A', 'B', 'C','D' };
+            string[] splittedContent = str.Split(delimiterChars);
+
+            //foreach (var word in splittedContent)
+            //{
+            //    QuestionDisplay.Text += word +'\n';
+            //}
+            //for(int i = 0; i < 3; i++)
+            //{
+            //    QuestionDisplay.Text += splittedContent[i];
+
+            //}
+            splittedContent = splittedContent.Where(x => !string.IsNullOrEmpty(x)).ToArray();
+            //Console.WriteLine(splittedContent[75]);
+            for (int i = 0; i < 50; i++)
+            {
+                dt.Rows.Add(0, 0, 0, 0, 0, 0, 0);
+            }
+            int indexOfTable = 0;
+            for (int i = 0; i < 250; i = i + 5)
+            {
+                dt.Rows[indexOfTable]["Question"] = splittedContent[i];
+                dt.Rows[indexOfTable]["A"] = splittedContent[i + 1];
+                dt.Rows[indexOfTable]["B"] = splittedContent[i + 2];
+                dt.Rows[indexOfTable]["C"] = splittedContent[i + 3];
+                dt.Rows[indexOfTable]["D"] = splittedContent[i + 4];
+                indexOfTable++;
+            }
+            //Question.Text = (string)dt.Rows[0]["Question"];
+            Question.Text = dt.Rows[10]["Question"].ToString();
+            A.Text = A.Name + dt.Rows[0]["A"].ToString();
+        }
+
+        private void Import_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

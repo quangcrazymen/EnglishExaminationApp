@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadWriteFile", "ReadWriteF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examination", "Examination\Examination.csproj", "{EAD407CE-BDC9-4074-B7E9-4355738CE4DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{C0FAC86A-8474-4FA0-869A-C889260DEDA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TH02", "TH02\TH02.csproj", "{FFC82011-EDDE-4DDF-9C3E-66781392FAE6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{EAD407CE-BDC9-4074-B7E9-4355738CE4DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAD407CE-BDC9-4074-B7E9-4355738CE4DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAD407CE-BDC9-4074-B7E9-4355738CE4DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0FAC86A-8474-4FA0-869A-C889260DEDA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0FAC86A-8474-4FA0-869A-C889260DEDA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0FAC86A-8474-4FA0-869A-C889260DEDA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0FAC86A-8474-4FA0-869A-C889260DEDA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFC82011-EDDE-4DDF-9C3E-66781392FAE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFC82011-EDDE-4DDF-9C3E-66781392FAE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFC82011-EDDE-4DDF-9C3E-66781392FAE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFC82011-EDDE-4DDF-9C3E-66781392FAE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
