@@ -14,7 +14,7 @@ namespace Examination
     public partial class Exam : Form
     {
         DataTable dt = new DataTable();
-
+        int currentQuestion = 1;
         public Exam()
         {
             InitializeComponent();
@@ -25,6 +25,22 @@ namespace Examination
             dt.Columns.Add("D");
             dt.Columns.Add("UrAnswer");
             dt.Columns.Add("Solution");
+        }
+        private Form activeForm;
+
+        private void OpenChildForm(Form childForm, object btnSender)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            this.panelPane.Controls.Add(childForm);
+            this.panelPane.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -67,7 +83,7 @@ namespace Examination
 
         private void Test_Click(object sender, EventArgs e)
         {
-            Exam exam = new Exam();
+            
             string str;
             str=ReadFile(@"D:\code\CSharp\Buoi5\ReadWriteFile\Buổi 5\TracNghiem_01.txt");
             //QuestionDisplay.Text = str;
@@ -105,13 +121,14 @@ namespace Examination
                 indexOfTable++;
             }
             //Question.Text = (string)dt.Rows[0]["Question"];
-            Question.Text = dt.Rows[10]["Question"].ToString();
+            Question.Text = dt.Rows[45]["Question"].ToString();
             A.Text = A.Name + dt.Rows[0]["A"].ToString();
         }
 
         private void Import_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new Form2(), sender);
+            
         }
     }
 }

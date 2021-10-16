@@ -34,17 +34,15 @@ namespace Examination
             this.Test = new System.Windows.Forms.Button();
             this.Close = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelPane = new System.Windows.Forms.Panel();
             this.Question = new System.Windows.Forms.Label();
             this.C = new System.Windows.Forms.RadioButton();
             this.B = new System.Windows.Forms.RadioButton();
             this.D = new System.Windows.Forms.RadioButton();
             this.A = new System.Windows.Forms.RadioButton();
-            this.QuestionDisplay = new System.Windows.Forms.RichTextBox();
-            this.AnswerDisplay = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panelPane.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -109,20 +107,18 @@ namespace Examination
             this.panel1.Size = new System.Drawing.Size(210, 568);
             this.panel1.TabIndex = 1;
             // 
-            // panel2
+            // panelPane
             // 
-            this.panel2.Controls.Add(this.Question);
-            this.panel2.Controls.Add(this.C);
-            this.panel2.Controls.Add(this.B);
-            this.panel2.Controls.Add(this.D);
-            this.panel2.Controls.Add(this.A);
-            this.panel2.Controls.Add(this.QuestionDisplay);
-            this.panel2.Controls.Add(this.AnswerDisplay);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(225, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(631, 568);
-            this.panel2.TabIndex = 2;
+            this.panelPane.Controls.Add(this.Question);
+            this.panelPane.Controls.Add(this.C);
+            this.panelPane.Controls.Add(this.B);
+            this.panelPane.Controls.Add(this.D);
+            this.panelPane.Controls.Add(this.A);
+            this.panelPane.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelPane.Location = new System.Drawing.Point(229, 0);
+            this.panelPane.Name = "panelPane";
+            this.panelPane.Size = new System.Drawing.Size(627, 568);
+            this.panelPane.TabIndex = 2;
             // 
             // Question
             // 
@@ -177,35 +173,19 @@ namespace Examination
             this.A.Text = "radioButton1";
             this.A.UseVisualStyleBackColor = true;
             // 
-            // QuestionDisplay
-            // 
-            this.QuestionDisplay.Location = new System.Drawing.Point(25, 349);
-            this.QuestionDisplay.Name = "QuestionDisplay";
-            this.QuestionDisplay.Size = new System.Drawing.Size(257, 198);
-            this.QuestionDisplay.TabIndex = 0;
-            this.QuestionDisplay.Text = "";
-            // 
-            // AnswerDisplay
-            // 
-            this.AnswerDisplay.Location = new System.Drawing.Point(288, 349);
-            this.AnswerDisplay.Name = "AnswerDisplay";
-            this.AnswerDisplay.Size = new System.Drawing.Size(331, 187);
-            this.AnswerDisplay.TabIndex = 2;
-            this.AnswerDisplay.Text = "";
-            // 
             // Exam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(856, 568);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelPane);
             this.Controls.Add(this.panel1);
             this.Name = "Exam";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelPane.ResumeLayout(false);
+            this.panelPane.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -216,14 +196,12 @@ namespace Examination
         private System.Windows.Forms.Button Import;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RichTextBox QuestionDisplay;
-        private System.Windows.Forms.RichTextBox AnswerDisplay;
         private System.Windows.Forms.RadioButton C;
         private System.Windows.Forms.RadioButton B;
         private System.Windows.Forms.RadioButton D;
         private System.Windows.Forms.RadioButton A;
         private System.Windows.Forms.Label Question;
+        private System.Windows.Forms.Panel panelPane;
     }
 }
 
