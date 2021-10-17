@@ -41,7 +41,7 @@ namespace Examination
             // 
             this.QuestionDisplay.Location = new System.Drawing.Point(112, 12);
             this.QuestionDisplay.Name = "QuestionDisplay";
-            this.QuestionDisplay.Size = new System.Drawing.Size(489, 307);
+            this.QuestionDisplay.Size = new System.Drawing.Size(581, 307);
             this.QuestionDisplay.TabIndex = 2;
             this.QuestionDisplay.Text = "";
             // 
@@ -49,7 +49,7 @@ namespace Examination
             // 
             this.AnswerDisplay.Location = new System.Drawing.Point(112, 325);
             this.AnswerDisplay.Name = "AnswerDisplay";
-            this.AnswerDisplay.Size = new System.Drawing.Size(489, 184);
+            this.AnswerDisplay.Size = new System.Drawing.Size(581, 184);
             this.AnswerDisplay.TabIndex = 4;
             this.AnswerDisplay.Text = "";
             // 
@@ -79,7 +79,7 @@ namespace Examination
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 521);
+            this.ClientSize = new System.Drawing.Size(705, 521);
             this.Controls.Add(this.Key);
             this.Controls.Add(this.Import);
             this.Controls.Add(this.AnswerDisplay);

@@ -81,31 +81,50 @@ namespace Examination
             return result;
         }
 
+        void toQuestion(int currentQuestion)
+        {
+            int i = currentQuestion - 1;
+            if (currentQuestion ==1) 
+            {
+                BackBtn.Visible = false;
+            }
+            else if (currentQuestion == 49)
+            {
+                NextBtn.Visible = false;
+            }
+            if(currentQuestion != 1)
+            {
+                BackBtn.Visible = true;
+            }
+            else if (currentQuestion != 49)
+            {
+                NextBtn.Visible = true;
+            }
+            Question.Text = dt.Rows[i]["Question"].ToString();
+            A.Text = A.Name + dt.Rows[i]["A"].ToString();
+            B.Text = B.Name + dt.Rows[i]["B"].ToString();
+            C.Text = C.Name + dt.Rows[i]["C"].ToString();
+            D.Text = D.Name + dt.Rows[i]["D"].ToString();
+        }
+
         private void Test_Click(object sender, EventArgs e)
         {
-            
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
             string str;
+            string key;
             str=ReadFile(@"D:\code\CSharp\Buoi5\ReadWriteFile\Buổi 5\TracNghiem_01.txt");
-            //QuestionDisplay.Text = str;
-            int index = str.IndexOf("A");
-            //str = ReadFileAnswer(@"D:\code\CSharp\Buoi5\ReadWriteFile\Buổi 5\DapAn_01.txt");
-            //AnswerDisplay.Text = str;
+            key=ReadFile(@"D:\code\CSharp\Buoi5\ReadWriteFile\Buổi 5\DapAn_01.txt");
+            //int index = str.IndexOf("A")
 
             //USE SPLIT TO SPLIT STRING
             char[] delimiterChars = { '\n', '\t', 'A', 'B', 'C','D' };
             string[] splittedContent = str.Split(delimiterChars);
-
-            //foreach (var word in splittedContent)
-            //{
-            //    QuestionDisplay.Text += word +'\n';
-            //}
-            //for(int i = 0; i < 3; i++)
-            //{
-            //    QuestionDisplay.Text += splittedContent[i];
-
-            //}
+            string[] KeyAnswer = key.Split('\n');
             splittedContent = splittedContent.Where(x => !string.IsNullOrEmpty(x)).ToArray();
-            //Console.WriteLine(splittedContent[75]);
+            //Add Question and answer into DataTable
             for (int i = 0; i < 50; i++)
             {
                 dt.Rows.Add(0, 0, 0, 0, 0, 0, 0);
@@ -120,15 +139,80 @@ namespace Examination
                 dt.Rows[indexOfTable]["D"] = splittedContent[i + 4];
                 indexOfTable++;
             }
-            //Question.Text = (string)dt.Rows[0]["Question"];
-            Question.Text = dt.Rows[45]["Question"].ToString();
-            A.Text = A.Name + dt.Rows[0]["A"].ToString();
+            //
+            toQuestion(1);
+            //Adding Key to data table
+            for (int i = 0; i < 50; i++)
+            {
+                dt.Rows[i]["Solution"] = KeyAnswer[i];
+            }
+            
+
         }
 
         private void Import_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Form2(), sender);
             
+        }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            toQuestion(currentQuestion);
+            currentQuestion -= 1;
+        }
+
+        private void NextBtn_Click(object sender, EventArgs e)
+        {
+            toQuestion(currentQuestion);
+            currentQuestion += 1;
+        }
+
+        private void A_CheckedChanged(object sender, EventArgs e)
+        {
+            dt.Rows[currentQuestion]["UrAnswer"] = 'A';
+        }
+
+        private void B_CheckedChanged(object sender, EventArgs e)
+        {
+            dt.Rows[currentQuestion]["UrAnswer"] = 'B';
+        }
+
+        private void C_CheckedChanged(object sender, EventArgs e)
+        {
+            dt.Rows[currentQuestion]["UrAnswer"] = 'C';
+        }
+
+        private void D_CheckedChanged(object sender, EventArgs e)
+        {
+            dt.Rows[currentQuestion]["UrAnswer"] = 'D';
+        }
+
+        void AddAnswer(int currentQuestion)
+        {
+            int i = currentQuestion - 1;
+            string labelQ = 'Q' + currentQuestion.ToString();
+            if(dt.Rows[i]["UrAnswer"].ToString()== dt.Rows[i]["Question"].ToString())
+            {
+                ResultPanel.Items.Add(labelQ, 1);
+                ResultPanel.LargeImageList = imageList1;
+                ResultPanel.View = View.LargeIcon;
+            }
+            else
+            {
+                ResultPanel.Items.Add(labelQ, 0);
+                ResultPanel.LargeImageList = imageList1;
+                ResultPanel.View = View.LargeIcon;
+            }
+
+        }
+
+        private void ResultBoard_Click(object sender, EventArgs e)
+        {
+            int i = 0;
+            while ((int)dt.Rows[i]["UrAnswer"] != 0){
+                AddAnswer(i+1);
+            }
         }
     }
 }
