@@ -1,0 +1,39 @@
+Samsung Chromebook 4 11.6, Intel Celeron N4020
+Price: $129.00
+Rating: 4.0
+Shipping Date: 4 days
+Guarentee: 2 years
+Lenovo Legion 5, 17.3, AMD Ryzen 5 5600H
+Price: $799.00
+Rating: 4.5
+Shipping Date: 1 days
+Guarentee: 2 years
+HP Chromebook 14-Inch HD Laptop, Intel Celeron N4000
+Price: $206.00
+Rating: 4.6
+Shipping Date: 3 days
+Guarentee: 2 years
+
+Qty&System.Windows.Forms.NumericUpDown, Minimum = 0, Maximum = 100Lenovo Ideapad Slim 7i Pro, 14.0
+Price: $999.00
+Rating: 3.5
+Shipping Date: 2 days
+Guarentee: 1 years
+
+Qty&2Samsung Chromebook 4 11.6, Intel Celeron N4020
+Price: $129.00
+Rating: 4.0
+Shipping Date: 4 days
+Guarentee: 2 years
+Qty&3Lenovo Ideapad 3i 15.6 FHD
+Price: $699.00
+Rating: 4.7
+Shipping Date: 2 days
+Guarentee: 2 years
+Qty&1
+Lenovo Ideapad Slim 7i Pro, 14.0
+Price: $999.00
+Rating: 3.5
+Shipping Date: 2 days
+Guarentee: 1 years
+Qty&2
