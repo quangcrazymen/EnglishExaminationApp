@@ -29,13 +29,17 @@ namespace TH02
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetailPage));
             this.panel1 = new System.Windows.Forms.Panel();
             this.productInfo = new System.Windows.Forms.Label();
             this.AddToCart = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Quantity = new System.Windows.Forms.NumericUpDown();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Quantity)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -80,6 +84,16 @@ namespace TH02
             // Quantity
             // 
             this.Quantity.Location = new System.Drawing.Point(164, 245);
+            this.Quantity.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.Quantity.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.Quantity.Name = "Quantity";
             this.Quantity.Size = new System.Drawing.Size(120, 22);
             this.Quantity.TabIndex = 0;
@@ -89,17 +103,40 @@ namespace TH02
             0,
             0});
             // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(16, 22);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(377, 239);
+            this.richTextBox1.TabIndex = 1;
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.Controls.Add(this.richTextBox1);
+            this.panel2.Location = new System.Drawing.Point(25, 196);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(413, 274);
+            this.panel2.TabIndex = 2;
+            // 
             // DetailPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(892, 524);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "DetailPage";
             this.Text = "DetailPage";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Quantity)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -111,5 +148,7 @@ namespace TH02
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown Quantity;
         private System.Windows.Forms.Label productInfo;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

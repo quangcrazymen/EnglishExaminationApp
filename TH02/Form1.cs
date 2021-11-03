@@ -54,5 +54,15 @@ namespace TH02
         {
             OpenChildForm(new Cart(), sender);
         }
+
+        private void HomePage_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void History_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

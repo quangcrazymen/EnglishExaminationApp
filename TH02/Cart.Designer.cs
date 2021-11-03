@@ -31,6 +31,7 @@ namespace TH02
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.YourCart = new System.Windows.Forms.PictureBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,16 +45,22 @@ namespace TH02
             this.Total = new System.Windows.Forms.Label();
             this.AcceptPayment = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.YourCart = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Quantity = new System.Windows.Forms.NumericUpDown();
+            this.CartClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.YourCart)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.YourCart)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Quantity)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel1.Controls.Add(this.CartClose);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.YourCart);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -73,6 +80,17 @@ namespace TH02
             this.label1.TabIndex = 4;
             this.label1.Text = "Cart";
             // 
+            // YourCart
+            // 
+            this.YourCart.Image = global::TH02.Properties.Resources.Cart;
+            this.YourCart.Location = new System.Drawing.Point(833, 8);
+            this.YourCart.Name = "YourCart";
+            this.YourCart.Size = new System.Drawing.Size(43, 44);
+            this.YourCart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.YourCart.TabIndex = 3;
+            this.YourCart.TabStop = false;
+            this.YourCart.Click += new System.EventHandler(this.YourCart_Click);
+            // 
             // listView1
             // 
             this.listView1.HideSelection = false;
@@ -81,6 +99,7 @@ namespace TH02
             this.listView1.Size = new System.Drawing.Size(393, 448);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.Click += new System.EventHandler(this.listView1_Click);
             // 
             // panel2
             // 
@@ -92,7 +111,7 @@ namespace TH02
             this.panel2.Controls.Add(this.Normal);
             this.panel2.Controls.Add(this.Express);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(442, 65);
+            this.panel2.Location = new System.Drawing.Point(442, 108);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(438, 274);
             this.panel2.TabIndex = 3;
@@ -115,6 +134,7 @@ namespace TH02
             this.Twenty.TabIndex = 5;
             this.Twenty.Text = "20% off";
             this.Twenty.UseVisualStyleBackColor = true;
+            this.Twenty.Click += new System.EventHandler(this.Twenty_Click);
             // 
             // Fifthteen
             // 
@@ -124,6 +144,7 @@ namespace TH02
             this.Fifthteen.TabIndex = 4;
             this.Fifthteen.Text = "15% off";
             this.Fifthteen.UseVisualStyleBackColor = true;
+            this.Fifthteen.Click += new System.EventHandler(this.Fifthteen_Click);
             // 
             // Ten
             // 
@@ -133,28 +154,31 @@ namespace TH02
             this.Ten.TabIndex = 3;
             this.Ten.Text = "10% off";
             this.Ten.UseVisualStyleBackColor = true;
+            this.Ten.Click += new System.EventHandler(this.Ten_Click);
             // 
             // Normal
             // 
             this.Normal.AutoSize = true;
-            this.Normal.Location = new System.Drawing.Point(24, 93);
+            this.Normal.Checked = true;
+            this.Normal.Location = new System.Drawing.Point(24, 56);
             this.Normal.Name = "Normal";
             this.Normal.Size = new System.Drawing.Size(201, 21);
             this.Normal.TabIndex = 2;
             this.Normal.TabStop = true;
             this.Normal.Text = "Normal Transtport - $15.00";
             this.Normal.UseVisualStyleBackColor = true;
+            this.Normal.CheckedChanged += new System.EventHandler(this.Normal_CheckedChanged);
             // 
             // Express
             // 
             this.Express.AutoSize = true;
-            this.Express.Location = new System.Drawing.Point(24, 56);
+            this.Express.Location = new System.Drawing.Point(24, 93);
             this.Express.Name = "Express";
             this.Express.Size = new System.Drawing.Size(202, 21);
             this.Express.TabIndex = 1;
-            this.Express.TabStop = true;
             this.Express.Text = "Express Transport - $30.00";
             this.Express.UseVisualStyleBackColor = true;
+            this.Express.CheckedChanged += new System.EventHandler(this.Express_CheckedChanged);
             // 
             // label2
             // 
@@ -172,59 +196,99 @@ namespace TH02
             this.panel3.Controls.Add(this.Total);
             this.panel3.Controls.Add(this.AcceptPayment);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(442, 358);
+            this.panel3.Location = new System.Drawing.Point(442, 400);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(438, 154);
+            this.panel3.Size = new System.Drawing.Size(438, 112);
             this.panel3.TabIndex = 4;
             // 
             // Total
             // 
             this.Total.AutoSize = true;
             this.Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Total.Location = new System.Drawing.Point(311, 52);
+            this.Total.Location = new System.Drawing.Point(311, 15);
             this.Total.Name = "Total";
-            this.Total.Size = new System.Drawing.Size(70, 25);
+            this.Total.Size = new System.Drawing.Size(24, 25);
             this.Total.TabIndex = 2;
-            this.Total.Text = "label5";
+            this.Total.Text = "0";
             // 
             // AcceptPayment
             // 
             this.AcceptPayment.BackColor = System.Drawing.Color.DodgerBlue;
             this.AcceptPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AcceptPayment.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.AcceptPayment.Location = new System.Drawing.Point(21, 99);
+            this.AcceptPayment.Location = new System.Drawing.Point(21, 65);
             this.AcceptPayment.Name = "AcceptPayment";
             this.AcceptPayment.Size = new System.Drawing.Size(389, 38);
             this.AcceptPayment.TabIndex = 1;
             this.AcceptPayment.Text = "Accept Payment";
             this.AcceptPayment.UseVisualStyleBackColor = false;
+            this.AcceptPayment.Click += new System.EventHandler(this.AcceptPayment_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 46);
+            this.label3.Location = new System.Drawing.Point(15, 15);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 31);
             this.label3.TabIndex = 0;
             this.label3.Text = "Total: ";
             // 
-            // YourCart
+            // panel4
             // 
-            this.YourCart.Image = global::TH02.Properties.Resources.Cart;
-            this.YourCart.Location = new System.Drawing.Point(833, 8);
-            this.YourCart.Name = "YourCart";
-            this.YourCart.Size = new System.Drawing.Size(43, 44);
-            this.YourCart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.YourCart.TabIndex = 3;
-            this.YourCart.TabStop = false;
-            this.YourCart.Click += new System.EventHandler(this.YourCart_Click);
+            this.panel4.BackColor = System.Drawing.SystemColors.Window;
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.Quantity);
+            this.panel4.Location = new System.Drawing.Point(442, 64);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(438, 38);
+            this.panel4.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(89, 11);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 17);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Quantity: ";
+            // 
+            // Quantity
+            // 
+            this.Quantity.Location = new System.Drawing.Point(234, 9);
+            this.Quantity.Maximum = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Size = new System.Drawing.Size(120, 22);
+            this.Quantity.TabIndex = 2;
+            this.Quantity.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Quantity.ValueChanged += new System.EventHandler(this.Quantity_ValueChanged);
+            // 
+            // CartClose
+            // 
+            this.CartClose.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.CartClose.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.CartClose.Location = new System.Drawing.Point(736, 15);
+            this.CartClose.Name = "CartClose";
+            this.CartClose.Size = new System.Drawing.Size(76, 31);
+            this.CartClose.TabIndex = 5;
+            this.CartClose.Text = "Close";
+            this.CartClose.UseVisualStyleBackColor = false;
+            this.CartClose.Click += new System.EventHandler(this.CartClose_Click);
             // 
             // Cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(892, 524);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.listView1);
@@ -234,11 +298,14 @@ namespace TH02
             this.Load += new System.EventHandler(this.Cart_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.YourCart)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.YourCart)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Quantity)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -261,5 +328,9 @@ namespace TH02
         private System.Windows.Forms.Button AcceptPayment;
         private System.Windows.Forms.Label Total;
         private System.Windows.Forms.PictureBox YourCart;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.NumericUpDown Quantity;
+        private System.Windows.Forms.Button CartClose;
     }
 }

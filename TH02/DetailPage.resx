@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value> Elevate your home viewing experience with cinema-inspired technologies that bring out every detail, produce accurate color, and deliver breathtaking contrast, all with incredible realism. Quantum dot technology allows you to experience vivid wide color and striking contrast, matching the format of Hollywood content creators. The premium HDR experience, Dolby Vision offers superior contrast and brighter, more accurate colors. 4K UHD resolution delivers stunning detail and a remarkable visual experience. </value>
+  </data>
 </root>
