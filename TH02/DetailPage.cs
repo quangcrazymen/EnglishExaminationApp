@@ -53,6 +53,21 @@ namespace TH02
             WriteFile("D:/code/CSharp/Buoi5/ReadWriteFile/CartData.txt", productInfo.Text);
             this.Close();
         }
+        //make image slider
+        private int ImageNumber = 1;
+        private void Slider()
+        {
+            if (ImageNumber == 4)
+            {
+                ImageNumber = 1;
+            }
+            pictureSlider.ImageLocation = string.Format(@"images\{0}.jpeg",ImageNumber);
+            ImageNumber++;
+        }
 
+        private void ImageTimer_Tick(object sender, EventArgs e)
+        {
+            Slider();
+        }
     }
 }

@@ -1,0 +1,5 @@
+Name	Price	Rating	ShippingDate	Guarantee
+Straight Talk Motorola Moto G Stylus 5G	206.00	4.6	3	2
+Straight Talk Apple iPhone 12 Mini	129.00	4.0	4	2
+Straight Talk Samsung Galaxy A11	999.00	3.5	2	1
+Straight Talk Samsung Galaxy A51	799.00	4.5	1	2

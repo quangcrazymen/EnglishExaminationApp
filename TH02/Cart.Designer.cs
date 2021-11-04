@@ -30,6 +30,7 @@ namespace TH02
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CartClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.YourCart = new System.Windows.Forms.PictureBox();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -48,7 +49,6 @@ namespace TH02
             this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.Quantity = new System.Windows.Forms.NumericUpDown();
-            this.CartClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.YourCart)).BeginInit();
             this.panel2.SuspendLayout();
@@ -68,6 +68,18 @@ namespace TH02
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(892, 58);
             this.panel1.TabIndex = 1;
+            // 
+            // CartClose
+            // 
+            this.CartClose.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.CartClose.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.CartClose.Location = new System.Drawing.Point(736, 15);
+            this.CartClose.Name = "CartClose";
+            this.CartClose.Size = new System.Drawing.Size(76, 31);
+            this.CartClose.TabIndex = 5;
+            this.CartClose.Text = "Close";
+            this.CartClose.UseVisualStyleBackColor = false;
+            this.CartClose.Click += new System.EventHandler(this.CartClose_Click);
             // 
             // label1
             // 
@@ -128,32 +140,38 @@ namespace TH02
             // 
             // Twenty
             // 
+            this.Twenty.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.Twenty.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Twenty.Location = new System.Drawing.Point(316, 178);
             this.Twenty.Name = "Twenty";
             this.Twenty.Size = new System.Drawing.Size(94, 66);
             this.Twenty.TabIndex = 5;
             this.Twenty.Text = "20% off";
-            this.Twenty.UseVisualStyleBackColor = true;
+            this.Twenty.UseVisualStyleBackColor = false;
             this.Twenty.Click += new System.EventHandler(this.Twenty_Click);
             // 
             // Fifthteen
             // 
+            this.Fifthteen.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.Fifthteen.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Fifthteen.Location = new System.Drawing.Point(176, 178);
             this.Fifthteen.Name = "Fifthteen";
             this.Fifthteen.Size = new System.Drawing.Size(94, 66);
             this.Fifthteen.TabIndex = 4;
             this.Fifthteen.Text = "15% off";
-            this.Fifthteen.UseVisualStyleBackColor = true;
+            this.Fifthteen.UseVisualStyleBackColor = false;
             this.Fifthteen.Click += new System.EventHandler(this.Fifthteen_Click);
             // 
             // Ten
             // 
+            this.Ten.BackColor = System.Drawing.Color.SkyBlue;
+            this.Ten.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ten.Location = new System.Drawing.Point(36, 178);
             this.Ten.Name = "Ten";
             this.Ten.Size = new System.Drawing.Size(94, 66);
             this.Ten.TabIndex = 3;
             this.Ten.Text = "10% off";
-            this.Ten.UseVisualStyleBackColor = true;
+            this.Ten.UseVisualStyleBackColor = false;
             this.Ten.Click += new System.EventHandler(this.Ten_Click);
             // 
             // Normal
@@ -247,9 +265,10 @@ namespace TH02
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(89, 11);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 17);
+            this.label5.Size = new System.Drawing.Size(73, 18);
             this.label5.TabIndex = 3;
             this.label5.Text = "Quantity: ";
             // 
@@ -270,18 +289,6 @@ namespace TH02
             0,
             0});
             this.Quantity.ValueChanged += new System.EventHandler(this.Quantity_ValueChanged);
-            // 
-            // CartClose
-            // 
-            this.CartClose.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.CartClose.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.CartClose.Location = new System.Drawing.Point(736, 15);
-            this.CartClose.Name = "CartClose";
-            this.CartClose.Size = new System.Drawing.Size(76, 31);
-            this.CartClose.TabIndex = 5;
-            this.CartClose.Text = "Close";
-            this.CartClose.UseVisualStyleBackColor = false;
-            this.CartClose.Click += new System.EventHandler(this.CartClose_Click);
             // 
             // Cart
             // 

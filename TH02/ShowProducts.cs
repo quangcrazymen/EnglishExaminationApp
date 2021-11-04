@@ -134,10 +134,6 @@ namespace TH02
 
             listView1.Columns.Add("Products", 150);
             listView1.AutoResizeColumn(0, ColumnHeaderAutoResizeStyle.HeaderSize);
-        }
-
-        private void Fill_Click(object sender, EventArgs e)
-        {
             populate();
         }
 
@@ -151,7 +147,7 @@ namespace TH02
             String selected = listView1.SelectedItems[0].SubItems[0].Text;
             //MessageBox.Show(selected);
             //OpenChildForm(new DetailPage(), sender);
-            Test.Text = ExtractPrice(listView1.SelectedItems[0].Text).ToString();
+            //Test.Text = ExtractPrice(listView1.SelectedItems[0].Text).ToString();
             TextBox1.Text = selected;
             //WriteFile("D:/code/CSharp/Buoi5/ReadWriteFile/CartData.txt", selected);
             DetailPage frm = new DetailPage();
@@ -159,9 +155,9 @@ namespace TH02
             frm.Show();
         }
 
-        private void YourCart_Click(object sender, EventArgs e)
+        private void Back_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
     }
 }

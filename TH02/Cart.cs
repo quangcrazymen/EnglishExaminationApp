@@ -93,7 +93,7 @@ namespace TH02
             populate();
             totalPrice = CalculatePrice();
             Total.Text = '$' + totalPrice.ToString();
-            
+
         }
 
         private void Cart_Load(object sender, EventArgs e)
@@ -102,6 +102,8 @@ namespace TH02
 
             listView1.Columns.Add("Products", 150);
             listView1.AutoResizeColumn(0, ColumnHeaderAutoResizeStyle.HeaderSize);
+
+            
         }
 
         private void listView1_Click(object sender, EventArgs e)
@@ -142,6 +144,9 @@ namespace TH02
         private void AcceptPayment_Click(object sender, EventArgs e)
         {
             this.Close();
+            DateTime now = DateTime.Now;
+            string content ="Date: "+now.ToString()+'\n'+ ReadFile("D:/code/CSharp/Buoi5/ReadWriteFile/CartData.txt")+"Total: "+totalPrice.ToString()+'\n'+"*************************************************"+'\n';
+            File.AppendAllText("D:/code/CSharp/Buoi5/ReadWriteFile/History.txt", content);
             File.WriteAllText("D:/code/CSharp/Buoi5/ReadWriteFile/CartData.txt", String.Empty);
         }
 

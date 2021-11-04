@@ -1,0 +1,69 @@
+Date: 11/4/2021 10:01:51 AM
+Lenovo Ideapad 3i 15.6 FHD
+Price: $699.00
+Rating: 4.7
+Shipping Date: 2 days
+Guarentee: 2 years
+Qty&2
+Total: 0
+*************************************************
+Date: 11/4/2021 10:02:08 AM
+HP Chromebook 14-Inch HD Laptop, Intel Celeron N4000
+Price: $206.00
+Rating: 4.6
+Shipping Date: 3 days
+Guarentee: 2 years
+Qty&1
+Lenovo Ideapad 3i 15.6 FHD
+Price: $699.00
+Rating: 4.7
+Shipping Date: 2 days
+Guarentee: 2 years
+Qty&2
+Total: 1388.9
+*************************************************
+Date: 11/4/2021 10:34:30 AM
+Lenovo Ideapad 3i 15.6 FHD
+Price: $699.00
+Rating: 4.7
+Shipping Date: 2 days
+Guarentee: 2 years
+Qty&2
+HP Chromebook 14-Inch HD Laptop, Intel Celeron N4000
+Price: $206.00
+Rating: 4.6
+Shipping Date: 3 days
+Guarentee: 2 years
+Qty&2
+Total: 1840
+*************************************************
+Date: 11/4/2021 3:16:37 PM
+Samsung Chromebook 4 11.6, Intel Celeron N4020
+Price: $129.00
+Rating: 4.0
+Shipping Date: 4 days
+Guarentee: 2 years
+Qty&2
+Total: 232.05
+*************************************************
+Date: 11/4/2021 3:49:06 PM
+Total: 0
+*************************************************
+Date: 11/4/2021 4:37:40 PM
+Lenovo Ideapad Slim 7i Pro, 14.0
+Price: $999.00
+Rating: 3.5
+Shipping Date: 2 days
+Guarentee: 1 years
+Qty&2
+Total: 1998
+*************************************************
+Date: 11/4/2021 4:37:52 PM
+Samsung Chromebook 4 11.6, Intel Celeron N4020
+Price: $129.00
+Rating: 4.0
+Shipping Date: 4 days
+Guarentee: 2 years
+Qty&1
+Total: 129
+*************************************************

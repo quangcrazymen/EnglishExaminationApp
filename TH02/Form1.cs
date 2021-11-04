@@ -62,7 +62,50 @@ namespace TH02
 
         private void History_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new History(), sender);
+        }
 
+        private void SearchBox_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (SearchBox.Text == "lenovo" || SearchBox.Text == "samsung"|| SearchBox.Text == "hp")
+            {
+                OpenChildForm(new DetailPage(), sender);
+            }
+        }
+
+        private void User_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Account(), sender);
+        }
+
+        private void History_MouseEnter(object sender, EventArgs e)
+        {
+            History.BackColor = Color.Blue;
+        }
+
+        private void History_MouseLeave(object sender, EventArgs e)
+        {
+            History.BackColor = Color.DodgerBlue;
+        }
+
+        private void User_MouseEnter(object sender, EventArgs e)
+        {
+            User.BackColor = Color.Blue;
+        }
+
+        private void User_MouseLeave(object sender, EventArgs e)
+        {
+            User.BackColor = Color.DodgerBlue;
+        }
+
+        private void CellPhone_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Mobile(), sender);
         }
     }
 }
